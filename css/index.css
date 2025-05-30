@@ -23,6 +23,11 @@ body {
     margin: 0 7px 0 5px;
 }
 
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
 /* Encabezado */
 header {
     display: flex;
@@ -58,33 +63,26 @@ header .centrador {
     font-weight: bold;
 }
 
-header .redes-contacto {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    height: 70%;
-    width: auto;
-    margin-right: 40px;  /* Más moderado */
+#menu-toggle {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin: 10px;
 }
 
-.email{
+.menu-categorias{
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
-    max-width: 100%;
-    word-break: break-word; 
-    overflow-wrap: anywhere;
-    flex-wrap: nowrap;
 }
 
-.redes-contacto > div {
-    display: flex;
-    align-items: center;
-}
-
-header .redes-contacto .redes .caja:nth-child(1){
-    margin: 4px 1px;
+.categorias{
+    width: 25%;
+    box-sizing: border-box;
+    padding: 0 5px;
+    border: 1px solid black;
 }
 
 main .seccion {
@@ -190,6 +188,29 @@ ul {
 
     .nombre-lema {
         font-size: 14px;
+    }
+
+    .menu-categorias {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: green;
+        border-top: 1px solid white;
+    }
+
+    .menu-categorias.show {
+        display: flex;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    .categorias {
+        width: 100%;
+        border: none;
+        text-align: center;
+        padding: 10px 0;
     }
 
     header .redes-contacto {
