@@ -37,13 +37,6 @@ main .seccion-larga {
     transform: translateY(-5px);
 }
 
-.titulo {
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 15px;
-    color: #333;
-}
-
 .izquierda, .derecha {
     flex: 1;
     display: flex;
@@ -58,4 +51,19 @@ main .seccion-larga {
 
 .valores, .objetivos, .metas {
     margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+    .izquierda, .derecha{
+        margin: 0;
+        padding: 0;
+    }
+
+    .lista {
+        grid-template-columns: 1fr;
+    }
+
+    .valores {
+        max-width: 100%;
+    }
 }

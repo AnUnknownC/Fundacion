@@ -1,0 +1,11 @@
+:root{
+    --var1: calc(var(--tamano-imagen) * 3);
+    --var2: calc(var(--tamano-imagen) * 4);
+}
+
+.derecha, .izquierda{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
