@@ -20,6 +20,11 @@
     height: calc(var(--tamano-imagen2) * 3);
 }
 
+.imgVertical, .imgHorizontal {
+    max-width: 100%;
+    height: auto;
+}
+
 .hidden{
     display: none;
 }
@@ -223,7 +228,7 @@ header .centrador {
         margin-right: 0px;
     }
 
-    main .seccion {
+    .seccion {
         flex-direction: column;
         padding: 30px 35px;
         width: 100vw;
@@ -232,7 +237,6 @@ header .centrador {
 
     .izquierda, .derecha {
         width: 100%;
-        background-color: black;
     }
 
     .contenido {

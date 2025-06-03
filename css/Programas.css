@@ -8,4 +8,23 @@
     align-items: center;
     justify-content: center;
     width: 50%;
+    padding: 10px; /* un poco de espacio interno para que respire */
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+    .seccion {
+        flex-direction: column;
+        padding: 20px 40px;
+        margin: 0;
+    }
+    .derecha, .izquierda {
+        width: 100%;
+        padding: 5px 0;
+    }
+    .contenido {
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
 }

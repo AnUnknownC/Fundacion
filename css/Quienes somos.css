@@ -1,14 +1,19 @@
-main .seccion{
+.imgVertical{
+    width: calc(150px * 3);
+    height: calc(150px * 4);
+}
+
+.seccion{
     min-height: 55vh;
     min-width: 60vw;
 }
 
-main .seccion-larga {
-    min-height: 80vh;
+.seccion-larga {
+    min-height: auto;
+    padding: 40px 20px;
 }
 
 #gridValores{
-    background-color: lightblue;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,7 +31,6 @@ main .seccion-larga {
     flex-direction: column;
     align-items: center;
     max-width: 20vw;
-    background-color: #e0f7fa;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -54,16 +58,43 @@ main .seccion-larga {
 }
 
 @media (max-width: 600px) {
-    .izquierda, .derecha{
+    .seccion, .seccion-larga {
+        flex-direction: column;
+        align-items: center;
         margin: 0;
+        padding: 20px 40px;
+    }
+
+    .imgVertical {
+        max-height: 300px;
+        width: auto;
+        height: auto;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .izquierda, .derecha {
+        margin: 10px 0;
+        padding: 0;
+    }
+
+    .contenido {
         padding: 0;
     }
 
     .lista {
         grid-template-columns: 1fr;
+        padding: 10px;
+        gap: 10px;
     }
 
     .valores {
         max-width: 100%;
+    }
+
+    .categorias a {
+        font-size: 16px;
+        padding: 12px;
     }
 }

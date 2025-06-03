@@ -4,10 +4,38 @@ main{
     justify-content: center;
 }
 
-.seccion{
+.seccion {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 45vw;
+    width: 100%;
+    max-width: 800px;
+    padding: 60px 100px;
+    margin: 20px auto;
+}
+
+.contenido{
+    width: 100%;
+}
+
+.texto{
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+iframe {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+    height: auto;
+    border: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .seccion {
+        padding: 20px 40px;
+        max-width: 100%;
+    }
 }
